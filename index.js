@@ -441,6 +441,10 @@ function session(options) {
 
     // generate the session object
     debug('fetching %s', req.sessionID);
+    var fetchTimeout = setTimeout(() => {
+      next(new Error("connect to session store timeout: " + options.storeConnectTimeout || 3000));
+    }, options.storeConnectTimeout || 3000);
+    
     store.get(req.sessionID, function(err, sess){
       // error handling
       if (err) {
