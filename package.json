@@ -1,6 +1,6 @@
 {
   "name": "beta-express-session",
-  "version": "1.14.2",
+  "version": "1.14.3",
   "description": "Simple session middleware for Express",
   "author": "Allan Fish <allanyu@tencent.com> (http://github.com/allanfish)",
   "contributors": [
